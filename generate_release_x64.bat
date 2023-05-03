@@ -1,5 +1,6 @@
 mkdir build
-cd build
-cmake -S .. -B . -A x64 -D CMAKE_BUILD_TYPE=Release ^
-    -D CMAKE_INSTALL_PREFIX:PATH="D:/Program Files/FMT"
+cmake -S . -B build -A x64 -D CMAKE_BUILD_TYPE=Release ^
+    -D CMAKE_INSTALL_PREFIX:PATH="%~dp0../../../3rd_party_libraries/FMT"
+cmake --build build --config Release
+cmake --install build --config Release
 pause
